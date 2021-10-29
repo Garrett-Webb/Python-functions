@@ -13,7 +13,7 @@ def rawcount(f):
     read_f = f.raw.read
     buf = read_f(buf_size)
     while buf:
-        lines += buf.count(b'\r\n')
+        lines += buf.count(b'\n')
         buf = read_f(buf_size)
     return lines
 
